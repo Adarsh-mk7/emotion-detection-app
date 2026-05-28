@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emotion Detection App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="/static/mywebscript.js"></script>
+    <style>
+      .center-heading {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+      .main-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container main-container">
+      <div class="card shadow-sm">
+        <div class="card-body p-5">
+          <h1 class="center-heading text-primary">NLP - Emotion Detection</h1>
+
+          <div class="form-group mb-4">
+            <label for="textToAnalyze" class="h4 mb-3"
+              >Please enter the text to be analyzed</label
+            >
+            <textarea
+              class="form-control"
+              id="textToAnalyze"
+              rows="3"
+              placeholder="Type your sentence here..."
+            ></textarea>
+          </div>
+
+          <div class="mb-4">
+            <button
+              onclick="RunSentimentAnalysis()"
+              class="btn btn-success btn-lg"
+            >
+              Run Sentiment Analysis
+            </button>
+          </div>
+
+          <hr class="my-4" />
+
+          <h3 class="text-secondary mb-3">Result of Emotion Detection</h3>
+
+          <div
+            id="system_response"
+            class="alert alert-info py-3 px-4"
+            style="font-size: 1.1rem; display: none"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
